@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    consul:
+      service-registry:
+        enabled: false
+      discovery:
+        enabled: false
+    service-registry:
+      enabled: false
+      auto-registration:
+        enabled: false
+  application:
+    name: spring-grpc
+grpc:
+  enable-reflection: true

@@ -2,7 +2,7 @@
 
 Samples of using Spring Native
 
-* Java 17 required
+* Java 17 required (GraalVM Java 17 required for `native` profile)
 * Tested with GraalVM 22.0.0.2 Java 17 CE
 
 ## gRPC
@@ -15,5 +15,6 @@ gRPC using [grpc-spring-boot-starter](https://github.com/yidongnan/grpc-spring-b
 
 Native image summary:
 
-* Size: 51M
-* Startup time: 5s (8s for JVM mode)
+* Size: 51MB
+* Startup time: 5.0s (7.8s for JVM mode)
+* Memory: 30.3MB     (126.4MB for JVM mode)

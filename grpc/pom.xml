@@ -13,9 +13,10 @@
   <name>gRPC</name>
 
   <properties>
-    <grpc-spring-boot-starter.version>4.6.0</grpc-spring-boot-starter.version>
+    <grpc-spring-boot-starter.version>2.13.1.RELEASE</grpc-spring-boot-starter.version>
     <spring-cloud.version>3.1.0</spring-cloud.version>
-    <grpc.version>1.43.2</grpc.version>
+    <grpc.version>1.42.2</grpc.version>
+    <netty.version>4.1.73.Final</netty.version>
   </properties>
 
   <dependencies>
@@ -29,8 +30,8 @@
       <version>${spring-native.version}</version>
     </dependency>
     <dependency>
-      <groupId>io.github.lognet</groupId>
-      <artifactId>grpc-spring-boot-starter</artifactId>
+      <groupId>net.devh</groupId>
+      <artifactId>grpc-server-spring-boot-starter</artifactId>
       <version>${grpc-spring-boot-starter.version}</version>
       <exclusions>
         <exclusion>
@@ -45,21 +46,27 @@
       <version>${grpc.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-      <version>${spring-cloud.version}</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.springframework.cloud</groupId>
-          <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-transport-native-unix-common</artifactId>
+      <version>${netty.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.devh</groupId>
+      <artifactId>grpc-client-spring-boot-starter</artifactId>
+      <version>${grpc-spring-boot-starter.version}</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>io.grpc</groupId>
+          <artifactId>grpc-netty-shaded</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
 
@@ -103,5 +110,24 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>native</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <argLine>
+                -agentlib:native-image-agent=access-filter-file=../test-access-filter.json,config-merge-dir=target/classes/META-INF/native-image/io.vividcode.spring-native/grpc
+              </argLine>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>

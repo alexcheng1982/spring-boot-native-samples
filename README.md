@@ -7,7 +7,7 @@ Samples of using Spring Native
 
 ## gRPC
 
-gRPC using [grpc-spring-boot-starter](https://github.com/LogNet/grpc-spring-boot-starter)
+gRPC using [grpc-spring-boot-starter](https://github.com/yidongnan/grpc-spring-boot-starter)
 
 1. Build the native image using `make grpc-native`.
 2. Run the native image using `./grpc/target/grpc`.
@@ -15,5 +15,5 @@ gRPC using [grpc-spring-boot-starter](https://github.com/LogNet/grpc-spring-boot
 
 Native image summary:
 
-* Size: 70M
+* Size: 51M
 * Startup time: 5s (8s for JVM mode)

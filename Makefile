@@ -1,3 +1,3 @@
 grpc-native:
 	cd grpc && \
-		mvn package -DskipTests -Pnative
+		mvn package -Pnative

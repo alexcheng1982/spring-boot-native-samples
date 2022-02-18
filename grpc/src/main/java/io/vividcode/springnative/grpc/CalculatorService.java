@@ -3,9 +3,9 @@ package io.vividcode.springnative.grpc;
 import io.grpc.stub.StreamObserver;
 import io.vividcode.springnative.grpc.CalculatorOuterClass.CalculatorRequest;
 import io.vividcode.springnative.grpc.CalculatorOuterClass.CalculatorResponse;
-import org.lognet.springboot.grpc.GRpcService;
+import net.devh.boot.grpc.server.service.GrpcService;
 
-@GRpcService
+@GrpcService
 public class CalculatorService extends CalculatorGrpc.CalculatorImplBase {
 
     @Override

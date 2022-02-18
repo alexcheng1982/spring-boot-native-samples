@@ -10,6 +10,7 @@ spring:
       auto-registration:
         enabled: false
   application:
-    name: spring-grpc
+    name: grpc
 grpc:
-  enable-reflection: true
+  server:
+    port: 6565

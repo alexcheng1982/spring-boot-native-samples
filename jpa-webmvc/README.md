@@ -20,6 +20,6 @@ Features:
 
 ## Native image summary
 
-* Size: 105MB
+* Size: 133MB
 * Startup time: 5.5s
 * Memory: 100.2MB 

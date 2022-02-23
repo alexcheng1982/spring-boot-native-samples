@@ -18,7 +18,7 @@ A microservice with REST API and RDBMS backend
 Features:
 
 * Spring Data JPA
-* Spring WebMvc
+* Spring Web MVC
 * Flyway
 * PostgreSQL
 * Testcontainers

@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @ImportAutoConfiguration(
@@ -20,7 +19,6 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
                 EmbeddedPostgreSQLBootstrapConfiguration.class,
         }
 )
-@SpringJUnitConfig(classes = NativeTestConfiguration.class)
 @ActiveProfiles("test")
 @DisplayName("User service")
 class UserServiceTest {

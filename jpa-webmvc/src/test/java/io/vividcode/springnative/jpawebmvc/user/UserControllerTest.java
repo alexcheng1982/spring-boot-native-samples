@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -22,7 +21,6 @@ import org.springframework.test.web.reactive.server.WebTestClient;
                 EmbeddedPostgreSQLBootstrapConfiguration.class,
         }
 )
-@SpringJUnitConfig(classes = NativeTestConfiguration.class)
 @ActiveProfiles("test")
 @DisplayName("User controller")
 public class UserControllerTest {

@@ -12,7 +12,6 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 @SpringBootTest(
         properties = {
-                "grpc.server.inProcessName=test",
                 "grpc.server.port=8888",
                 "grpc.client.calculatorService.address=localhost:8888",
                 "grpc.client.calculatorService.negotiationType=PLAINTEXT"

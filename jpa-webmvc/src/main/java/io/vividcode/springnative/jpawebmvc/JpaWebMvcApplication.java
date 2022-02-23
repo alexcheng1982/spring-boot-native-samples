@@ -1,13 +1,13 @@
-package io.vividcode.springnative.grpc;
+package io.vividcode.springnative.jpawebmvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GrpcApplication {
+public class JpaWebMvcApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GrpcApplication.class, args);
+        SpringApplication.run(JpaWebMvcApplication.class, args);
     }
 
 }

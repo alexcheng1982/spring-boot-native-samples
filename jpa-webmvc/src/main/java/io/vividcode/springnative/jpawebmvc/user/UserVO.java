@@ -1,4 +1,4 @@
-package io.vividcode.simpleservice.user;
+package io.vividcode.springnative.jpawebmvc.user;
 
 import lombok.Value;
 

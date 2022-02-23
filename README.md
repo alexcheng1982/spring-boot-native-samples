@@ -22,3 +22,4 @@ Features:
 * Flyway
 * PostgreSQL
 * Testcontainers
+* OpenAPI doc & Swagger UI

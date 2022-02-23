@@ -9,12 +9,14 @@ Features:
 * Flyway
 * PostgreSQL
 * Testcontainers
+* OpenAPI doc & Swagger UI
 
 ## Usage
 
-1. Build the native image using `mvn package -Pnative`.
-2. Run the native image using `./target/jpa-webmvc`.
-3. Access `http://localhost:8080/api/v1/user/1` to test the service.
+1. Start PostgreSQL database using the `docker-compose.yml` file.
+2. Build the native image using `mvn package -Pnative`.
+3. Run the native image using `./target/jpa-webmvc`.
+4. Access Swagger UI (`http://localhost:8080/swagger-ui/4.5.0/index.html`) to test the service.
 
 ## Native image summary
 

@@ -17,6 +17,8 @@
     <module>grpc</module>
     <module>jpa-webmvc</module>
     <module>native-support</module>
+    <module>reactive-jdbc-webflux</module>
+    <module>reactive-test</module>
   </modules>
 
   <properties>
@@ -24,7 +26,29 @@
     <repackage.classifier/>
     <spring-native.version>0.11.2</spring-native.version>
     <graalvm.version>22.0.0.2</graalvm.version>
+    <spring-cloud-starter-bootstrap.version>3.1.1</spring-cloud-starter-bootstrap.version>
+    <playtika.version>2.0.20</playtika.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.experimental</groupId>
+        <artifactId>spring-native</artifactId>
+        <version>${spring-native.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        <version>${spring-cloud-starter-bootstrap.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.playtika.testcontainers</groupId>
+        <artifactId>embedded-postgresql</artifactId>
+        <version>${playtika.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <pluginManagement>

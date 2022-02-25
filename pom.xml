@@ -18,7 +18,6 @@
     <module>jpa-webmvc</module>
     <module>native-support</module>
     <module>reactive-jdbc-webflux</module>
-    <module>reactive-test</module>
   </modules>
 
   <properties>

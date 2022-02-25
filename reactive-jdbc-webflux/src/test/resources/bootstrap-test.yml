@@ -1,0 +1,5 @@
+embedded:
+  postgresql:
+    enabled: true
+    docker-image: 'postgres:13-alpine'
+    wait-timeout-in-seconds: 60

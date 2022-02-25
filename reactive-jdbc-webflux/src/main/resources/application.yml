@@ -1,0 +1,13 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:example}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    name: ${DB_NAME:example}
+    properties:
+      schema: ${DB_SCHEMA:example}
+  flyway:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:example}
+    user: ${spring.r2dbc.username}
+    password: ${spring.r2dbc.password}
+    default-schema: ${DB_SCHEMA:example}

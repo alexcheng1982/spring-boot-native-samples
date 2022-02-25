@@ -1,0 +1,16 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_DB: example
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    restart: on-failure

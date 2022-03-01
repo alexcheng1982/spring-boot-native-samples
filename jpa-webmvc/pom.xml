@@ -75,6 +75,17 @@
       <artifactId>springdoc-openapi-ui</artifactId>
       <version>${springdoc.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-native</artifactId>
+      <version>${springdoc.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.experimental</groupId>
+      <artifactId>spring-aot</artifactId>
+      <version>${spring-native.version}</version>
+      <scope>provided</scope>
+    </dependency>
 
     <dependency>
       <groupId>org.springframework.cloud</groupId>
@@ -114,13 +125,6 @@
   <profiles>
     <profile>
       <id>native</id>
-      <dependencies>
-        <dependency>
-          <groupId>org.springdoc</groupId>
-          <artifactId>springdoc-openapi-native</artifactId>
-          <version>${springdoc.version}</version>
-        </dependency>
-      </dependencies>
       <build>
         <plugins>
           <plugin>

@@ -23,3 +23,15 @@ Features:
 * PostgreSQL
 * Testcontainers
 * OpenAPI doc & Swagger UI
+
+### Reactive JDBC & WebFlux
+
+A reactive microservice with REST API and RDBMS backend
+
+Features:
+
+* Spring Data R2dbc
+* Spring WebFlux
+* Flyway
+* PostgreSQL
+* Testcontainers

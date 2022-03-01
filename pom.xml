@@ -115,6 +115,11 @@
   <profiles>
     <profile>
       <id>native</id>
+      <activation>
+        <file>
+          <exists>.native-marker</exists>
+        </file>
+      </activation>
       <properties>
         <repackage.classifier>exec</repackage.classifier>
         <native-buildtools.version>0.9.10</native-buildtools.version>

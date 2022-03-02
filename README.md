@@ -1,5 +1,7 @@
 # Spring Native Samples
 
+![build](https://github.com/alexcheng1982/spring-native-samples/actions/workflows/build.yml/badge.svg)
+
 Samples of using Spring Native
 
 * Java 17 required (GraalVM Java 17 required for `native` profile)

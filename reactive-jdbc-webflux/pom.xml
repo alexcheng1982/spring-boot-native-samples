@@ -90,6 +90,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
+          <skipTests>${env.NO_DOCKER}</skipTests>
           <argLine>
             -agentlib:native-image-agent=access-filter-file=./test-access-filter.json,config-merge-dir=target/test-classes/META-INF/native-image/io.vividcode.spring-native/reactive-jdbc-webflux
           </argLine>

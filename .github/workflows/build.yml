@@ -24,3 +24,5 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
         run: mvn -B -ntp package
+        env:
+          NO_DOCKER: ${{ runner.os != 'Linux' }}

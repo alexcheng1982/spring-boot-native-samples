@@ -13,6 +13,7 @@
   <name>gRPC</name>
 
   <properties>
+    <skip-native-tests>true</skip-native-tests>
     <grpc-spring-boot-starter.version>2.13.1.RELEASE</grpc-spring-boot-starter.version>
     <spring-cloud.version>3.1.0</spring-cloud.version>
     <grpc.version>1.42.2</grpc.version>

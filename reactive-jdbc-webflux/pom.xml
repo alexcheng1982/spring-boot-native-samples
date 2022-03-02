@@ -12,6 +12,10 @@
   <artifactId>reactive-jdbc-webflux</artifactId>
   <name>Reactive JDBC WebFlux</name>
 
+  <properties>
+    <skip-native-tests>true</skip-native-tests>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.springframework.experimental</groupId>

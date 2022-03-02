@@ -12,6 +12,7 @@
   <name>JPA Webmvc</name>
 
   <properties>
+    <skip-native-tests>true</skip-native-tests>
     <springdoc.version>1.6.6</springdoc.version>
   </properties>
 

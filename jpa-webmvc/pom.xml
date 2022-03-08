@@ -12,7 +12,7 @@
   <name>JPA Webmvc</name>
 
   <properties>
-    <skip-native-tests>true</skip-native-tests>
+    <skip-native-tests>false</skip-native-tests>
     <springdoc.version>1.6.6</springdoc.version>
   </properties>
 
@@ -73,7 +73,7 @@
     </dependency>
     <dependency>
       <groupId>org.springdoc</groupId>
-      <artifactId>springdoc-openapi-ui</artifactId>
+      <artifactId>springdoc-openapi-webmvc-core</artifactId>
       <version>${springdoc.version}</version>
     </dependency>
     <dependency>
@@ -133,6 +133,11 @@
   <profiles>
     <profile>
       <id>native</id>
+      <activation>
+        <file>
+          <exists>.native-marker</exists>
+        </file>
+      </activation>
       <build>
         <plugins>
           <plugin>

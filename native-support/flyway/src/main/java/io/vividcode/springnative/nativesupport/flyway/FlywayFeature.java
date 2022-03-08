@@ -51,10 +51,6 @@ public class FlywayFeature implements Feature {
         }
     }
 
-    public static void init() {
-        // Dummy method to trigger initialization
-    }
-
     private Collection<String> discoverApplicationMigrations(Collection<String> locations)
             throws IOException {
         LinkedHashSet<String> applicationMigrationResources = new LinkedHashSet<>();

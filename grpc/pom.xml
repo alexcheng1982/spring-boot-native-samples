@@ -121,6 +121,11 @@
   <profiles>
     <profile>
       <id>native</id>
+      <activation>
+        <file>
+          <exists>.native-marker</exists>
+        </file>
+      </activation>
       <build>
         <plugins>
           <plugin>

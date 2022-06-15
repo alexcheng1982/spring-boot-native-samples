@@ -23,7 +23,7 @@
   <properties>
     <java.version>17</java.version>
     <repackage.classifier/>
-    <spring-native.version>0.11.5</spring-native.version>
+    <spring-native.version>0.12.0</spring-native.version>
     <graalvm.version>22.0.0.2</graalvm.version>
     <spring-cloud-starter-bootstrap.version>3.1.1</spring-cloud-starter-bootstrap.version>
     <playtika.version>2.1.8</playtika.version>

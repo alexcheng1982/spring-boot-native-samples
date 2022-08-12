@@ -14,6 +14,7 @@
 
   <properties>
     <skip-native-tests>true</skip-native-tests>
+    <r2dbc.postgresql.version>0.8.12.RELEASE</r2dbc.postgresql.version>
   </properties>
 
   <dependencies>
@@ -46,6 +47,7 @@
     <dependency>
       <groupId>io.r2dbc</groupId>
       <artifactId>r2dbc-postgresql</artifactId>
+      <version>${r2dbc.postgresql.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>

@@ -12,20 +12,21 @@ import org.flywaydb.core.internal.database.base.Database;
 import org.flywaydb.core.internal.database.base.Schema;
 import org.flywaydb.core.internal.schemahistory.SchemaHistory;
 
-/**
- * Avoid using reflection
- */
+/** Avoid using reflection */
 @TargetClass(Flyway.class)
 public final class FlywaySubstitutions {
 
-    @Alias
-    private ClassicConfiguration configuration;
+  @Alias private ClassicConfiguration configuration;
 
-    @Substitute
-    private CleanResult doClean(
-            Database database, SchemaHistory schemaHistory, Schema defaultSchema, Schema[] schemas,
-            CallbackExecutor callbackExecutor) {
-        return new DbClean(database, schemaHistory, defaultSchema, schemas, callbackExecutor,
-                configuration).clean();
-    }
+  @Substitute
+  private CleanResult doClean(
+      Database database,
+      SchemaHistory schemaHistory,
+      Schema defaultSchema,
+      Schema[] schemas,
+      CallbackExecutor callbackExecutor) {
+    return new DbClean(
+            database, schemaHistory, defaultSchema, schemas, callbackExecutor, configuration)
+        .clean();
+  }
 }

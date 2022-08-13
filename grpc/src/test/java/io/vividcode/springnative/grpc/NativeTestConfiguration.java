@@ -6,9 +6,5 @@ import org.springframework.nativex.hint.JdkProxyHint;
 import org.springframework.nativex.hint.NativeHint;
 import org.springframework.nativex.type.NativeConfiguration;
 
-@NativeHint(
-        jdkProxies = @JdkProxyHint(types = {Configuration.class, SynthesizedAnnotation.class})
-)
-public class NativeTestConfiguration implements NativeConfiguration {
-
-}
+@NativeHint(jdkProxies = @JdkProxyHint(types = {Configuration.class, SynthesizedAnnotation.class}))
+public class NativeTestConfiguration implements NativeConfiguration {}

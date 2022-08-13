@@ -5,12 +5,9 @@ import org.springframework.nativex.hint.NativeHint;
 
 @Configuration
 @NativeHint(
-        options = {
-                "-H:+ReportExceptionStackTraces",
-                "--initialize-at-run-time=io.netty",
-                "--initialize-at-build-time=io.netty.util",
-        }
-)
-public class SpringNativeConfiguration {
-
-}
+    options = {
+      "-H:+ReportExceptionStackTraces",
+      "--initialize-at-run-time=io.netty",
+      "--initialize-at-build-time=io.netty.util",
+    })
+public class SpringNativeConfiguration {}

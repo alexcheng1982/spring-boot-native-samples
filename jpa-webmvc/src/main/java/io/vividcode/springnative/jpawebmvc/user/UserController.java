@@ -19,44 +19,44 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/user")
 public class UserController {
 
-    @Autowired
-    UserService userService;
+  @Autowired UserService userService;
 
-    @Operation(
-            summary = "Get user",
-            operationId = "user.get",
-            parameters = {
-                    @Parameter(
-                            name = "userId",
-                            description = "User ID",
-                            in = ParameterIn.PATH,
-                            example = "1",
-                            required = true
-                    )
-            },
-            responses = {
-                    @ApiResponse(
-                            description = "Successful operation",
-                            responseCode = "200",
-                            content = @Content(
-                                    mediaType = "application/json",
-                                    schema = @Schema(implementation = UserVO.class)
-                            )
-                    ),
-                    @ApiResponse(
-                            description = "Not found",
-                            responseCode = "404",
-                            content = @Content
-                    )
-            }
-    )
-    @Tag(name = "User", description = "User service")
-    @GetMapping(path = "{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserVO> getUser(@PathVariable("userId") Long userId) {
-        return this.userService.find(userId)
-                .map(user -> new UserVO(user.getId(), user.getUsername(), user.getFirstName(),
-                        user.getLastName(), user.getEmail(), user.getGender()))
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
-    }
+  @Operation(
+      summary = "Get user",
+      operationId = "user.get",
+      parameters = {
+        @Parameter(
+            name = "userId",
+            description = "User ID",
+            in = ParameterIn.PATH,
+            example = "1",
+            required = true)
+      },
+      responses = {
+        @ApiResponse(
+            description = "Successful operation",
+            responseCode = "200",
+            content =
+                @Content(
+                    mediaType = "application/json",
+                    schema = @Schema(implementation = UserVO.class))),
+        @ApiResponse(description = "Not found", responseCode = "404", content = @Content)
+      })
+  @Tag(name = "User", description = "User service")
+  @GetMapping(path = "{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
+  public ResponseEntity<UserVO> getUser(@PathVariable("userId") Long userId) {
+    return this.userService
+        .find(userId)
+        .map(
+            user ->
+                new UserVO(
+                    user.getId(),
+                    user.getUsername(),
+                    user.getFirstName(),
+                    user.getLastName(),
+                    user.getEmail(),
+                    user.getGender()))
+        .map(ResponseEntity::ok)
+        .orElseGet(() -> ResponseEntity.notFound().build());
+  }
 }

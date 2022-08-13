@@ -7,10 +7,9 @@ import reactor.core.publisher.Mono;
 @Service
 public class UserService {
 
-    @Autowired
-    UserRepository userRepository;
+  @Autowired UserRepository userRepository;
 
-    public Mono<User> find(Long userId) {
-        return this.userRepository.findById(userId);
-    }
+  public Mono<User> find(Long userId) {
+    return this.userRepository.findById(userId);
+  }
 }

@@ -10,16 +10,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class CalculatorServiceClient {
 
-    @GrpcClient("calculatorService")
-    CalculatorBlockingStub calculatorService;
+  @GrpcClient("calculatorService")
+  CalculatorBlockingStub calculatorService;
 
-    public double calculate(OperationType operationType, double op1, double op2) {
-        CalculatorRequest request = CalculatorRequest.newBuilder()
-                .setOperation(operationType)
-                .setNumber1(op1)
-                .setNumber2(op2)
-                .build();
-        CalculatorResponse response = calculatorService.calculate(request);
-        return response.getResult();
-    }
+  public double calculate(OperationType operationType, double op1, double op2) {
+    CalculatorRequest request =
+        CalculatorRequest.newBuilder()
+            .setOperation(operationType)
+            .setNumber1(op1)
+            .setNumber2(op2)
+            .build();
+    CalculatorResponse response = calculatorService.calculate(request);
+    return response.getResult();
+  }
 }

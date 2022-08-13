@@ -16,25 +16,25 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureWebTestClient
 @ImportAutoConfiguration(
-        classes = {
-                DockerPresenceBootstrapConfiguration.class,
-                EmbeddedPostgreSQLBootstrapConfiguration.class,
-        }
-)
+    classes = {
+      DockerPresenceBootstrapConfiguration.class,
+      EmbeddedPostgreSQLBootstrapConfiguration.class,
+    })
 @ActiveProfiles("test")
 @DisplayName("User controller")
 public class UserControllerTest {
 
-    @Autowired
-    WebTestClient webClient;
+  @Autowired WebTestClient webClient;
 
-    @Test
-    @DisplayName("Find user")
-    void testFindUser() {
-        this.webClient.get()
-                .uri("/api/v1/user/{id}", 1)
-                .accept(MediaType.APPLICATION_JSON)
-                .exchange()
-                .expectStatus().isOk();
-    }
+  @Test
+  @DisplayName("Find user")
+  void testFindUser() {
+    this.webClient
+        .get()
+        .uri("/api/v1/user/{id}", 1)
+        .accept(MediaType.APPLICATION_JSON)
+        .exchange()
+        .expectStatus()
+        .isOk();
+  }
 }

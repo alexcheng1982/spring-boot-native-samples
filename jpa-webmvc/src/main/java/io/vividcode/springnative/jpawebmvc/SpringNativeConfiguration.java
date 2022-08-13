@@ -5,10 +5,7 @@ import org.springframework.nativex.hint.NativeHint;
 
 @Configuration
 @NativeHint(
-        options = {
-                "-H:+ReportExceptionStackTraces",
-        }
-)
-public class SpringNativeConfiguration {
-
-}
+    options = {
+      "-H:+ReportExceptionStackTraces",
+    })
+public class SpringNativeConfiguration {}

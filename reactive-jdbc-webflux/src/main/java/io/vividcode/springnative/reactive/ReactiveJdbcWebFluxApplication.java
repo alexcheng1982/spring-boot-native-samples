@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 @Import(WebConfig.class)
 public class ReactiveJdbcWebFluxApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ReactiveJdbcWebFluxApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(ReactiveJdbcWebFluxApplication.class, args);
+  }
 }

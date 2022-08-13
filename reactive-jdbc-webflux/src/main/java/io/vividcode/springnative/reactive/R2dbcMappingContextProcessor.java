@@ -8,12 +8,11 @@ import org.springframework.stereotype.Component;
 @Component
 class R2dbcMappingContextProcessor implements BeanPostProcessor {
 
-    @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName)
-            throws BeansException {
-        if (bean instanceof R2dbcMappingContext) {
-            ((R2dbcMappingContext) bean).setForceQuote(true);
-        }
-        return bean;
+  @Override
+  public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+    if (bean instanceof R2dbcMappingContext) {
+      ((R2dbcMappingContext) bean).setForceQuote(true);
     }
+    return bean;
+  }
 }

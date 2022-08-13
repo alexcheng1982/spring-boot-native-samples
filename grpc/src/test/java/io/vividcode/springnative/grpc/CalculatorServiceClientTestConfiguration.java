@@ -8,22 +8,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ImportAutoConfiguration(
-        {
-                GrpcServerAutoConfiguration.class,
-                GrpcServerFactoryAutoConfiguration.class,
-                GrpcClientAutoConfiguration.class
-        }
-)
+@ImportAutoConfiguration({
+  GrpcServerAutoConfiguration.class,
+  GrpcServerFactoryAutoConfiguration.class,
+  GrpcClientAutoConfiguration.class
+})
 public class CalculatorServiceClientTestConfiguration {
 
-    @Bean
-    CalculatorServiceClient calculatorServiceClient() {
-        return new CalculatorServiceClient();
-    }
+  @Bean
+  CalculatorServiceClient calculatorServiceClient() {
+    return new CalculatorServiceClient();
+  }
 
-    @Bean
-    CalculatorService calculatorService() {
-        return new CalculatorService();
-    }
+  @Bean
+  CalculatorService calculatorService() {
+    return new CalculatorService();
+  }
 }

@@ -23,9 +23,9 @@ public final class FlywaySubstitutions {
 
     @Substitute
     private CleanResult doClean(
-            Database database, SchemaHistory schemaHistory, Schema[] schemas,
+            Database database, SchemaHistory schemaHistory, Schema defaultSchema, Schema[] schemas,
             CallbackExecutor callbackExecutor) {
-        return new DbClean(database, schemaHistory, schemas, callbackExecutor,
+        return new DbClean(database, schemaHistory, defaultSchema, schemas, callbackExecutor,
                 configuration).clean();
     }
 }

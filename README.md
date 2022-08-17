@@ -5,7 +5,7 @@
 Samples of using Spring Native
 
 * Java 17 required (GraalVM Java 17 required for `native` profile)
-* Tested with GraalVM 22.0.0.2 Java 17 CE
+* Tested with GraalVM 22.2.0 Java 17 CE
 
 ## Samples
 

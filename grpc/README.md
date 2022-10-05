@@ -1,6 +1,6 @@
 # gRPC Sample
 
-gRPC using [grpc-spring-boot-starter](https://github.com/yidongnan/grpc-spring-boot-starter)
+gRPC
 
 ## Usage
 

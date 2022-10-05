@@ -1,8 +1,8 @@
-# Spring Native Samples
+# Spring Boot Native Samples
 
 ![build](https://github.com/alexcheng1982/spring-native-samples/actions/workflows/build.yml/badge.svg)
 
-Samples of using Spring Native
+Samples of using Spring Boot to build native executables
 
 * Java 17 required (GraalVM Java 17 required for `native` profile)
 * Tested with GraalVM 22.2.0 Java 17 CE

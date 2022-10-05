@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "io.vividcode.springnative.grpc";
+option java_package = "io.vividcode.springbootnative.grpc";
 
 
 message CalculatorRequest {

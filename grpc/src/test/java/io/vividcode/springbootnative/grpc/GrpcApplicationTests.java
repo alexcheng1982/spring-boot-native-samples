@@ -1,6 +1,8 @@
-package io.vividcode.springnative.grpc;
+package io.vividcode.springbootnative.grpc;
 
-import io.vividcode.springnative.grpc.CalculatorOuterClass.CalculatorRequest.OperationType;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import io.vividcode.springbootnative.grpc.CalculatorOuterClass.CalculatorRequest.OperationType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,20 +10,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 @SpringBootTest(
     properties = {
-      "grpc.server.port=8888",
-      "grpc.client.calculatorService.address=localhost:8888",
-      "grpc.client.calculatorService.negotiationType=PLAINTEXT"
+        "grpc.server.port=8888",
     })
 @SpringJUnitConfig(classes = {CalculatorServiceClientTestConfiguration.class})
 @DirtiesContext
 @DisplayName("gRPC")
 class GrpcApplicationTests {
 
-  @Autowired CalculatorServiceClient client;
+  @Autowired
+  CalculatorServiceClient client;
 
   @Test
   @DisplayName("Calculator")

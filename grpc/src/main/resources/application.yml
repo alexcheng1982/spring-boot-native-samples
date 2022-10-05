@@ -1,14 +1,4 @@
 spring:
-  cloud:
-    consul:
-      service-registry:
-        enabled: false
-      discovery:
-        enabled: false
-    service-registry:
-      enabled: false
-      auto-registration:
-        enabled: false
   application:
     name: grpc
 grpc:

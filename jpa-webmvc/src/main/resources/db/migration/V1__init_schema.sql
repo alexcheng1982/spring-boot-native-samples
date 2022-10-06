@@ -1,4 +1,4 @@
-CREATE TABLE "user" (
+CREATE TABLE "users" (
 	id BIGINT NOT NULL,
 	username VARCHAR(50),
 	first_name VARCHAR(50),

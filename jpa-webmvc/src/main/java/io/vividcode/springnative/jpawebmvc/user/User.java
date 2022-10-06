@@ -1,18 +1,18 @@
 package io.vividcode.springnative.jpawebmvc.user;
 
-import lombok.Data;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
-  @Id private long id;
+  @Id
+  private long id;
   private String username;
 
   @Column(name = "first_name")

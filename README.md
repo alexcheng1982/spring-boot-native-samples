@@ -1,6 +1,6 @@
 # Spring Boot Native Samples
 
-![build](https://github.com/alexcheng1982/spring-native-samples/actions/workflows/build.yml/badge.svg)
+![build](https://github.com/alexcheng1982/spring-boot-native-samples/actions/workflows/build.yml/badge.svg)
 
 Samples of using Spring Boot to build native executables
 
@@ -9,13 +9,24 @@ Samples of using Spring Boot to build native executables
 
 ## Samples
 
+
 ### gRPC
 
 Simple gRPC service
 
+| Mode | Binary size | Startup time | Memory |
+|--------|-------|-------|--|
+| JVM | 21.5 (JAR) | 0.835s | 96MB |
+| Native | 47.8MB | 0.085s | 17.4MB |
+
 ### Spring Data JPA with WebMvc
 
 A microservice with REST API and RDBMS backend
+
+| Mode | Binary size | Startup time | Memory |
+|--------|-------|-------|--|
+| JVM | 43.5 (JAR) | 2.83s | 183MB |
+| Native | 123MB | 0.237s | 64.6MB |
 
 Features:
 
@@ -29,6 +40,11 @@ Features:
 ### Reactive JDBC & WebFlux
 
 A reactive microservice with REST API and RDBMS backend
+
+| Mode | Binary size | Startup time | Memory |
+|--------|-------|-------|--|
+| JVM | 32.1 (JAR) | 1.929s | 142.7MB |
+| Native | 79.4MB | 0.217s | 56.9MB |
 
 Features:
 

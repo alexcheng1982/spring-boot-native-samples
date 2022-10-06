@@ -10,10 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-@SpringBootTest(
-    properties = {
-        "grpc.server.port=8888",
-    })
+@SpringBootTest
 @SpringJUnitConfig(classes = {CalculatorServiceClientTestConfiguration.class})
 @DirtiesContext
 @DisplayName("gRPC")

@@ -2,6 +2,7 @@ package io.vividcode.springbootnative.grpc;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import io.grpc.protobuf.services.ProtoReflectionService;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
@@ -20,7 +21,9 @@ public class GrpcServer {
 
   public GrpcServer(@Value("${grpc.server.port:6565}") int port,
       CalculatorService calculatorService) {
-    server = ServerBuilder.forPort(port).addService(calculatorService).build();
+    server = ServerBuilder.forPort(port)
+        .addService(ProtoReflectionService.newInstance())
+        .addService(calculatorService).build();
   }
 
   @EventListener(ApplicationStartedEvent.class)

@@ -29,11 +29,6 @@
       <groupId>org.flywaydb</groupId>
       <artifactId>flyway-core</artifactId>
     </dependency>
-    <!--        <dependency>-->
-    <!--            <groupId>io.vividcode.spring-native.native-support</groupId>-->
-    <!--            <artifactId>flyway</artifactId>-->
-    <!--            <version>${project.version}</version>-->
-    <!--        </dependency>-->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>

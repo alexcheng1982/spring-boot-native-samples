@@ -20,6 +20,6 @@ Features:
 
 ## Native image summary
 
-* Size: 132MB
-* Startup time: 5.5s
-* Memory: 100.2MB 
+* Size: 123MB
+* Startup time: 0.237s (2.83s for JVM mode)
+* Memory: 64.6MB (183MB for JVM mode)

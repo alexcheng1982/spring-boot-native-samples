@@ -9,15 +9,14 @@ Samples of using Spring Boot to build native executables
 
 ## Samples
 
-
 ### gRPC
 
 Simple gRPC service
 
 | Mode | Binary size | Startup time | Memory |
 |--------|-------|-------|--|
-| JVM | 21.5 (JAR) | 0.835s | 96MB |
-| Native | 47.8MB | 0.085s | 17.4MB |
+| JVM | 21.5 (JAR) | 0.96s | 96MB |
+| Native | 47.8MB | 0.124s | 24.8MB |
 
 ### Spring Data JPA with WebMvc
 

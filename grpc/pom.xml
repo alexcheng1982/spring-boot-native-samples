@@ -35,13 +35,8 @@
       <artifactId>spring-boot-starter</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-logging</artifactId>
-    </dependency>
-    <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-netty</artifactId>
-      <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.grpc</groupId>
@@ -121,9 +116,7 @@
             <configuration>
               <buildArgs>
                 <buildArg>-H:+ReportExceptionStackTraces</buildArg>
-                <buildArg>--initialize-at-run-time=io.netty
-                </buildArg>
-                <buildArg>--initialize-at-build-time=sun.instrument.InstrumentationImpl</buildArg>
+                <buildArg>--initialize-at-run-time=io.netty</buildArg>
               </buildArgs>
             </configuration>
           </plugin>

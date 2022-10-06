@@ -11,5 +11,5 @@ gRPC
 ## Native image summary
 
 * Size: 47.8MB
-* Startup time: 0.085s (0.835s for JVM mode)
-* Memory: 17.4MB     (96MB for JVM mode)
+* Startup time: 0.124s (0.96s for JVM mode)
+* Memory: 24.8MB     (96MB for JVM mode)

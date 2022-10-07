@@ -9,6 +9,8 @@ Samples of using Spring Boot to build native executables
 
 ## Samples
 
+> Metrics captured on Windows 10 with GraalVM 22.2.0 Java 17 CE
+
 ### gRPC
 
 Simple gRPC service
@@ -24,8 +26,8 @@ A microservice with REST API and RDBMS backend
 
 | Mode | Binary size | Startup time | Memory |
 |--------|-------|-------|--|
-| JVM | 43.5 (JAR) | 2.83s | 183MB |
-| Native | 123MB | 0.237s | 64.6MB |
+| JVM | 42.1 (JAR) | 2.72s | 183MB |
+| Native | 122MB | 0.233s | 62.1MB |
 
 Features:
 
@@ -34,7 +36,6 @@ Features:
 * Flyway
 * PostgreSQL
 * Testcontainers
-* OpenAPI doc & Swagger UI
 
 ### Reactive JDBC & WebFlux
 

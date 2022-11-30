@@ -1,15 +1,16 @@
-# Spring Boot Native Samples
+# Spring Boot 3.0 Native Samples
 
 ![build](https://github.com/alexcheng1982/spring-boot-native-samples/actions/workflows/build.yml/badge.svg)
 
-Samples of using Spring Boot to build native executables
+Samples of using Spring Boot 3.0 to build native executables
 
 * Java 17 required (GraalVM Java 17 required for `native` profile)
-* Tested with GraalVM 22.2.0 Java 17 CE
+* Spring Boot 3.0.0
+* Tested with GraalVM 22.3.0 Java 17 CE
 
 ## Samples
 
-> Metrics captured on Windows 10 with GraalVM 22.2.0 Java 17 CE
+> Metrics captured on Windows 10 with GraalVM 22.3.0 Java 17 CE
 
 ### gRPC
 
@@ -26,8 +27,8 @@ A microservice with REST API and RDBMS backend
 
 | Mode | Binary size | Startup time | Memory |
 |--------|-------|-------|--|
-| JVM | 42.1 (JAR) | 2.72s | 183MB |
-| Native | 122MB | 0.233s | 62.1MB |
+| JVM | 42.7 (JAR) | 2.72s | 183MB |
+| Native | 129MB | 0.277s | 62.3MB |
 
 Features:
 
